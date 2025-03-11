@@ -24,11 +24,19 @@ function moviesAverageOfDirector(array, director) {
     0
   );
   const averageScore = totalScore / givenDirector.length;
-  return averageScore;
+  return parseFloat(averageScore.toFixed(2));
 }
 
 // Exercise 4:  Alphabetic order by title
-function orderAlphabetically(array) {}
+function orderAlphabetically(movies) {
+  let alphabeticMovies = movies.map((movie) => movie.title).sort();
+  if (alphabeticMovies.length < 20) {
+    return alphabeticMovies;
+  } else {
+    alphabeticMovies.length = 20;
+  }
+  return alphabeticMovies;
+}
 
 // Exercise 5: Order by year, ascending
 function orderByYear() {}

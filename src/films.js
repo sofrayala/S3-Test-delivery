@@ -33,9 +33,8 @@ function orderAlphabetically(movies) {
   if (alphabeticMovies.length < 20) {
     return alphabeticMovies;
   } else {
-    alphabeticMovies.length = 20;
+    return alphabeticMovies.slice(0, 20);
   }
-  return alphabeticMovies;
 }
 
 // Exercise 5: Order by year, ascending

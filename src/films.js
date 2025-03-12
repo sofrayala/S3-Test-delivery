@@ -40,10 +40,7 @@ function orderAlphabetically(movies) {
 // Exercise 5: Order by year, ascending
 function orderByYear(movies) {
   return [...movies].sort((a, b) => {
-    if (a.year !== b.year) {
-      return a.year - b.year;
-    }
-
+    if (a.year !== b.year) return a.year - b.year;
     if (a.title > b.title) {
       return 1;
     } else if (a.title < b.title) {
@@ -54,7 +51,7 @@ function orderByYear(movies) {
 }
 
 // Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory() {}
+function moviesAverageByCategory(movies, genre) {}
 
 // Exercise 7: Modify the duration of movies to minutes
 function hoursToMinutes() {}

@@ -9,7 +9,6 @@ function getAllDirectors(movies) {
 // Exercise 2: Get the films of a certain director
 function getMoviesFromDirector(movies, director) {
   let result2 = movies.filter((movies) => movies.director === director);
-  console.log('EXERCISE 2 ->', result2);
   return result2;
 }
 
@@ -51,7 +50,19 @@ function orderByYear(movies) {
 }
 
 // Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory(movies, genre) {}
+function moviesAverageByCategory(movies, genre) {
+  let givenCategory = movies.filter((movie) => movie.genre.includes(genre));
+  if (givenCategory.length === 0) return 0;
+
+  let totalScoreCat = givenCategory.reduce(
+    (total, movie) => total + movie.score,
+    0
+  );
+
+  let averageScoreByCat = totalScoreCat / givenCategory.length;
+  return parseFloat(averageScoreByCat.toFixed(2));
+}
+//33 tests passed
 
 // Exercise 7: Modify the duration of movies to minutes
 function hoursToMinutes() {}

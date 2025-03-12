@@ -43,6 +43,13 @@ function orderByYear(movies) {
     if (a.year !== b.year) {
       return a.year - b.year;
     }
+
+    if (a.title > b.title) {
+      return 1;
+    } else if (a.title < b.title) {
+      return -1;
+    }
+    return 0;
   });
 }
 
